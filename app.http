@@ -1,0 +1,32 @@
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+###
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjcxNTI4NjUzfQ.2T98gRR-3keyYt-TQUCjE84Zx8-hlbj95WxaCs8LbnY
+
+###
+GET http://localhost:3000/states/:stateId/
+Content-Type: application/json
+
+{
+  "stateId": 8,
+  "stateName": "Delhi",
+  "population": 16787941
+}
+###
+POST http://localhost:3000/districts/
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
